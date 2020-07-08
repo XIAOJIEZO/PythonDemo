@@ -13,5 +13,17 @@ message = '去吧："皮卡丘"'
 print(message)
 
 # 使用方法修改字符串大小写
-name = 'roger'
+name = 'roger J'
 print(name.title())     # 首字母大写
+print(name.upper())     # 全部转换为大写
+print(name.lower())     # 全部转换为小写
+
+# 拼接字符串:使用（+）来合并字符串
+first_name = 'roger'
+last_name = 'J'
+full_name = first_name+' '+last_name
+print('full_name=', full_name)
+
+# 制表符&换行符添加空白
+print('\tPython')   # 在输出前添加一个Tab长度
+print('Language:\n\tPython\n\tJava')    # \n换行符
