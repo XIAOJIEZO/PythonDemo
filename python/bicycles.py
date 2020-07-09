@@ -45,7 +45,7 @@ legends = ['亚索', '劫', 1, '菲兹']
 print(legends)
 
 pop_legends = legends.pop()     # 菲兹
-print(legends)                  # 菲兹
+print(legends)                  # ['亚索', '劫', 1]
 print('pop_lengds=', pop_legends)
 
 # 弹出列表中任何位置元素，使用方法pop()也可以删除任何位置元素，只需要知道索引
@@ -81,11 +81,16 @@ print('第三次邀请的人员名单为：', guests[0], guests[1], guests[2], g
 
 print('餐桌没了，只能邀请两位了')
 while len(guests) > 2:
-    guests.pop()
-    print('sorry', guests[len(guests)-1])
+    guests_0 = guests.pop()
+    print('sorry', guests_0)
 
-while len(guests) > 0:
-    guest_1 = guests.pop()
-    print('共进晚餐吧', guest_1)
-
+len_guests = len(guests)
+while len_guests > 0:
+    print('共进晚餐吧', guests[len_guests-1])
+    len_guests = len_guests - 1
+   
+len_guests_1 = len(guests)
+while len_guests_1 > 0:
+    del guests[len_guests_1-1]
+    len_guests_1 = len_guests_1 - 1
 print(guests)
