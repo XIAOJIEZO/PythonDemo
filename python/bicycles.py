@@ -110,3 +110,65 @@ cars = ['bmw', 'audi', 'toyota', 'subaru']
 print(sorted(cars))
 print(sorted(cars, reverse = True))
 print(cars)
+
+# 倒着打印列表，使用reverse()方法，
+cars = ['bmw', 'audi', 'toyota', 'subaru']
+print(cars)
+
+cars.reverse()      # reverse永久改变列表元素排列顺序，恢复原来的顺序再次调研reverse()
+print(cars)
+
+# 确定列表长度，使用方法len()
+leng = len(cars)
+print('car列表字段长度：', leng)
+
+"""
+练习：想出五个想去的地方
+1、保存到列表
+2、打印出列表
+3、按字母排序打印，不改变列
+4、再次打印核实列表未改变
+5、与第3方向相反打印，不该变列表
+6、再次打印，核实列表未改变
+7、改变列表排序，逆向输出列表
+8、再次改变列表，还原
+9、修改列表排序，按字母顺序排序
+10、修改列表排序，按字母相反顺序排序
+11、查看列表长度
+"""
+# 1
+citys = {'shanghai', 'hangzhou', 'dali', 'chengdu', 'guiyang'}
+
+# 2
+print('初始的列表=', citys)
+
+# 3
+print('按字母排序=', sorted(citys))
+
+# 4
+print('现在的列表=', citys)
+
+# 5
+print('字母倒序排序=', sorted(citys, reverse= True))
+
+# 6
+print('现在的列表=', citys)
+
+# 7
+citys.reverse()
+print('现在的列表=', citys)
+
+# 8
+citys.reverse()
+print('现在的列表=', citys)
+
+# 9
+citys.sort()
+print('按字母排序=', citys)
+
+# 10
+citys.sort(reverse = True)
+print('按字母倒序=', citys)
+
+# 11
+print('列表长度为：', len(citys))
