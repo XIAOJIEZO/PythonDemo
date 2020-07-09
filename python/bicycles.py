@@ -94,3 +94,19 @@ while len_guests_1 > 0:
     del guests[len_guests_1-1]
     len_guests_1 = len_guests_1 - 1
 print(guests)
+
+# 使用方法sort()对数组进行排序，永久性修改排序
+cars = ['bmw', 'audi', 'toyota', 'subaru']
+cars.sort()
+print(cars)
+
+# sort()添加参数 reverse=True 使其得到相反的结果 
+cars = ['bmw', 'audi', 'toyota', 'subaru']
+cars.sort(reverse = True)
+print(cars)
+
+# 使用方法sorted()对列表进行临时排序，列表原始的顺序不会改变
+cars = ['bmw', 'audi', 'toyota', 'subaru']
+print(sorted(cars))
+print(sorted(cars, reverse = True))
+print(cars)
