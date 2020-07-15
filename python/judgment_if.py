@@ -10,12 +10,12 @@ for car in cars:
 # 条件测试：每条if语句的核心都是一个值未True或False的表达式，这种表达式被称为条件测试
 
 # 检查是否相等  ==
-print(1==1)     # true
-print(1==2)     # false
+print(1 == 1)     # true
+print(1 == 2)     # false
 
 # 检查是否不相等   !=
-print(1!=1)     # FALSE
-print(1!=2)     # true
+print(1 !=1 )     # FALSE
+print(1 != 2)     # true
 
 # 比较数字:== > < >= <= !=
 age = 18
