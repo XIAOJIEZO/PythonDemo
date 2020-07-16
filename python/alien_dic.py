@@ -62,3 +62,27 @@ favorite_nums = {
 }
 for name in favorite_nums:
     print(name + '喜欢的数字是' + str(favorite_nums[name]))
+
+# 遍历字典
+# 遍历所有的键-值对
+for k, v in favorite_nums.items():  # k和v变量可以任意命名，方法items()返回一个键-值对列表，for循环依次将每个键-值对存储到指定的两个变量中
+    print('keys:' + k)
+    print('values:' + str(v))
+    
+# 遍历字典中的所有键
+for k in favorite_nums.keys():
+    print(k)
+    
+peoples = ['张楚岚', '冯宝宝', '风星瞳']     # 需要调查的名单
+for people in peoples:
+    if people not in favorite_nums.keys():
+        print(people + '未接受调查')
+
+# 按顺序遍历字典中的所有键：获取字典元素时，获取顺序是不可预测的
+favorite_laguages = {
+    'jen': 'python',
+    'sarah': 'C',
+    'rogen': 'PHP'
+}
+for i in sorted(favorite_laguages.keys()):
+    print(i)
