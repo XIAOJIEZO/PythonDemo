@@ -1,5 +1,5 @@
 # 一个简单的字典
-aline_0 ={'color': 'green', 'points': 5}
+aline_0 = {'color': 'green', 'points': 5}
 print(aline_0['color'])
 print(aline_0['points'])
 
@@ -79,10 +79,41 @@ for people in peoples:
         print(people + '未接受调查')
 
 # 按顺序遍历字典中的所有键：获取字典元素时，获取顺序是不可预测的
-favorite_laguages = {
+favorite_languages = {
     'jen': 'python',
     'sarah': 'C',
-    'rogen': 'PHP'
+    'rogen': 'PHP',
+    'jack': 'PHP'
 }
 for i in sorted(favorite_laguages.keys()):
     print(i)
+
+# 遍历字典中的所有值：这种做法提取字典中的所有值，而没有考虑是否重复
+for value in favorite_laguages.values():
+    print(value)
+    
+# 想要去除重复，可以使用集合set()，集合类似于列表，但每个元素是独一无二的
+favorite_languages = {
+    'jen': 'python',
+    'sarah': 'C',
+    'rogen': 'PHP',
+    'jack': 'PHP'
+}
+for language in set(favorite_languages.values()):
+    print(language)
+    
+# 嵌套
+# 自动生成外新人：列表嵌套字典 字典嵌套列表 字段存储字典
+alines = []
+for num in range(30):       # 创建30个绿色外星人
+    new_aline = {'color': 'green', 'points': 5}
+    alines.append(new_aline)
+print(alines)
+
+for aline in alines[:3]:    # 修改前三个外星人属性
+    aline['color'] = 'yellow'
+    aline['points'] = 10
+    
+for aline in alines[:5]:      # 打印前五个外星人
+    print(aline)
+    
