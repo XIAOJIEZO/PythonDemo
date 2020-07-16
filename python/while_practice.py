@@ -8,7 +8,7 @@ while current_number <= 5:
     
 # 让用户选择何时退出
 message = ''
-while message == 'quit':
+while message != 'quit':
     message = input('输入任意值继续，输入"quit退出"')
     print('你输入的是' + message)
     
