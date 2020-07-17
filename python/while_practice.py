@@ -58,3 +58,40 @@ while nums < 10:
     if nums % 2 == 0:
         continue
     print(nums)     # 不需要else时，可省略
+
+"""
+使用while循环来处理列表和字典：for循环是一种遍历列表的有效方式，但在for循环中不应该修改列表，否则将导致Python难以跟踪其中的元素。要在遍历列表额同时对其进行修改，可使用while循环。通过将while循环同列表和字典结合起来使用，可收集、存储兵组织大量输入，提供以后查看和显示。
+"""
+
+# 在列表之间移动元素：假设有一个列表，包含新注册但未验证的用户，验证这些用户后，如何将他们移动到已验证列表
+unconfirmation_users = ['白切鸡', '王富贵', '杨一叹']
+confirmation_users = []
+while unconfirmation_users:
+    user = unconfirmation_users.pop()
+    print('\n检测到未验证用户' + user + '，将其添加至已验证列表！')
+    confirmation_users.append(user)
+print('目前已验证用户：')
+for confirmation_user in confirmation_users:
+    print('\t' + confirmation_user)
+
+# 删除包含特定值的左右元素：新建列表pets，while循环删除cat
+pets = ['dog', 'cat', 'pig', 'cat', 'cat', 'dog']
+while 'cat' in pets:
+    pets.remove('cat')
+print(pets)
+
+# 使用用户输入来填充字典
+# 调查用户喜欢的动漫人物是什么，输入yes继续，输入no调查结束
+favorite_role = {}
+active = True
+while active:
+    name = input('请输入被调查者姓名：')
+    role = input('请输入' + name + '喜欢的动漫人物：')
+    favorite_role[name] = role
+    
+    active = input('调查是否继续？（no退出|任意值继续）')
+    if active == 'no':
+        active = False
+for name, role in favorite_role.items():
+    print(name + '最喜欢的动漫人物是' + role + '！')
+    
