@@ -33,6 +33,10 @@ class Car():
     def increment_odomete(self, mileage):
         """里程数递增"""
         self.odometer_reading += mileage
+        
+    def fill_gas_tank(self):
+        """描述汽车油箱容量"""
+        print('汽车最大容量5L')
 
 # 创建一个汽车子类，电动车
 class ElectricCar(Car):     # 创建子类时，父类必须包含在当前文件中，且位于子类前面。括号内包含父类名称。
@@ -64,5 +68,23 @@ class ElectricCar1(Car):     # 创建子类时，父类必须包含在当前文�
     def describe_battery(self):
         print('这辆车电瓶容量为' + str(self.battery_size))
 
-my_first_tesla = ElectricCar1('tesla1', 'model s', 99)
+my_first_tesla = ElectricCar1('tesla', 'model s', 2016)
 my_first_tesla.describe_battery()
+
+# 重写父类方法：对于父类的方法，只要它不符合子类模拟的实物行为，都可对其进行重写。
+class ElectricCar2(Car):
+    """电动车的独特之处"""
+
+    def __init__(self, make, model, year):
+        """
+        初始化父类属性
+        再初始化子类特有属性
+        """
+        super().__init__(make, model, year)
+        self.battery_size = 50
+    """重写fill_gas_tank()方法，方法名与父类方法同名"""
+    def fill_gas_tank(self):
+        print('电动车没有油箱')
+
+my_second_tesla = ElectricCar2('tesla', 'model 2', 2017)
+my_second_tesla.fill_gas_tank()
