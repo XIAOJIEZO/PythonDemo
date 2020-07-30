@@ -88,3 +88,26 @@ class ElectricCar2(Car):
 
 my_second_tesla = ElectricCar2('tesla', 'model 2', 2017)
 my_second_tesla.fill_gas_tank()
+
+"""
+    将实例用作属性：使用代码模拟实物时，给类添加的细节越来越多，属性和方法清单以及文件都越来越长。在这种情况下，可以将类的一部分作为一个独立的类提取出来，
+将大型类拆分成多个协同工作的小类。
+"""
+class Battery():
+    """模拟汽车电瓶"""
+
+    def __init__(self, battery_size = 70):
+        self.battery_size = battery_size
+
+    def describe_battery(self):
+        print('This car has a ' + str(self.battery_size) + '-kwh battery')
+
+class ElectricCar3(Car):
+
+    def __init__(self, make, model, year):
+        super().__init__(make, model, year)
+        self.battery = Battery()        # 将实例用作属性
+
+
+my_third_tesla = ElectricCar3('tesla', 'model 2', 2018)
+my_third_tesla.battery.describe_battery()   # Python在实例my_third_tesla查找battery属性，并对存储在该属性的Battery实例调用方法describe_battery()
