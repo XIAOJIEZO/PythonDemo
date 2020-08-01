@@ -59,7 +59,7 @@ except ZeroDivisionError:
 3、计算一个文件某个单词出现的次数
 """
 # 1
-nums = input('Please enter the number to sum,use spaces to separate numbers.\n')
+nums = input('Please enter the number to sum,use spaces to separate numbers：\n')
 num_list = nums.split()
 sum = 0
 for num in num_list:
@@ -71,7 +71,7 @@ for num in num_list:
     else:
         sum += num
         
-if sum ==0:
+if sum == 0:
     pass
 else:
     print(sum)
@@ -83,15 +83,15 @@ try:
         for cat in cats_object:
             print(cat.rstrip())
 except FileNotFoundError:
-    message = filename + ' file does not exist'
-    print(message)
+    pass
     
 # 3
+word = input('Please enter the word to be searched：')
 try:
-    with open('files\snowman.txt') as snowman_obj:
-        snowman = snowman_obj
-        count = snowman.lower().count('he')
-                
+    with open('files\snowman.txt') as snowman_object:
+        count = snowman_object.read().lower().count(word)
 except FileNotFoundError:
-    message = filename + ' file does not exist'
+    message = 'snowman.txt file does not exist'
     print(message)
+else:
+    print('The number of the word in the file is ' + str(count))
