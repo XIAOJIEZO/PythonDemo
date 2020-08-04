@@ -56,7 +56,7 @@ def get_new_username5():
 
 def greet_username5():
     """问候用户，并指出其姓名"""
-    username5 = get_storedd_username5()
+    username5 = get_stored_username5()
     if username5:
         print('Welcome back, ' + username5 + '!')
     else:
