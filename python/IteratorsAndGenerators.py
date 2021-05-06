@@ -16,7 +16,7 @@ print(next(it))
 def frange(start, stop, step):
     x = start
     while x < stop:
-        yield x  # 带yield的成为迭代器
+        yield x  # 带yield的称为迭代器
         x += step
 
 

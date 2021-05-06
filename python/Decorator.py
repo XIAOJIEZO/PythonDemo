@@ -18,7 +18,7 @@ def sum(a):  # 外部函数
 
 
 # add 函数名称或函数的引用
-# add() 函数的额调用
+# add() 函数的调用
 
 num1 = sum(1)
 print(num1(2))
