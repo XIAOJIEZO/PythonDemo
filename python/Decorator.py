@@ -93,5 +93,5 @@ finally:
 
 # 使用with就不需要使用finally了
 with open("name.txt") as f:
-    for line in fd:
+    for line in f:
         print(line)
